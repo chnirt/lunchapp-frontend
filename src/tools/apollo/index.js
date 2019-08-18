@@ -16,11 +16,11 @@ const end_point = 'graphqllunch'
 const urn = process.env.REACT_APP_GRAPHQL_URN || `${domain}:${port}/${end_point}`
 
 const httpLink = new HttpLink({
-	uri: `http://${urn}`
+	uri: `https://${urn}`
 })
 
 const wsLink = new WebSocketLink({
-	uri: `ws://${urn}`,
+	uri: `wss://${urn}`,
 	options: {
 		// reconnect: true
 		connectionParams: () => ({
